@@ -6,7 +6,7 @@
 
     <div class="mx-auto max-w-xl  lg:max-w-lg">
         <div class="border-b border-gray-200 pb-5 mb-10 sm:flex sm:items-center sm:justify-between">
-            <h3 class="text-base font-semibold text-gray-900">Create a New User</h3>
+            <h3 class="text-base font-semibold text-gray-900">Update User</h3>
             <div class="mt-3 sm:ml-4 sm:mt-0">
               <a href="/list" class="inline-flex items-center rounded-md bg-gray-200 px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-gray-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">List Users</a>
             </div>

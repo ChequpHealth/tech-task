@@ -24,10 +24,10 @@ class CreateUser extends Component
         'firstname' => 'required|string|max:255',
         'lastname' => 'required|string|max:255',
         'email' => 'required|email|unique:users,email',
-        'phone_number' => 'required|string|max:40|min:7',
-        'gender' => 'required|string|max:6|min:4',
+        'phone_number' => 'nullable|string|max:40|min:7',
+        'gender' => 'nullable|string|max:6|min:4',
         'password' => 'required|string|min:8|confirmed',
-        'country' => 'required|string|max:255',
+        'country' => 'nullable|string|max:255',
         'profile_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:1024',
     ];
 
