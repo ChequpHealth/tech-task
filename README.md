@@ -75,7 +75,7 @@ php artisan serve
 ```
 Visit: http://127.0.0.1:8000
 
-##🌐 Technologies Used
+## 🌐 Technologies Used
 - Laravel 10+
 - Laravel Livewire
 - Alpine.js
@@ -83,13 +83,13 @@ Visit: http://127.0.0.1:8000
 - SQLite/MySQL
 - PHPUnit & Laravel Test Framework
 
-##✨ Extras
--🔁 Animated alert messages using Tailwind transitions
--🧪 TDD methodology with red-green cycle
--📸 Image storage in storage/app/public/profile_picture
--🧪 Factories used for database seeding and testing
+## ✨ Extras
+- 🔁 Animated alert messages using Tailwind transitions
+- 🧪 TDD methodology with red-green cycle
+- 📸 Image storage in storage/app/public/profile_picture
+- 🧪 Factories used for database seeding and testing
 
-##🤝 Contribution
+## 🤝 Contribution
 To contribute:
 - Fork the repository
 - Create your branch (git checkout -b feature/feature-name)
@@ -97,5 +97,5 @@ To contribute:
 - Push to the branch (git push origin feature/feature-name)
 - Open a Pull Request
 
-##📝 License
+## 📝 License
 MIT License © Emmanuel John
