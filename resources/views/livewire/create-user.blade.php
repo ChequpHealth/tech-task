@@ -6,9 +6,18 @@
 
     <div class="mx-auto max-w-xl  lg:max-w-lg">
         <div class="border-b border-gray-200 pb-5 mb-10 sm:flex sm:items-center sm:justify-between">
-            <h3 class="text-base font-semibold text-gray-900">Create a New User</h3>
+            <h3 class="text-3xl font-extralight text-gray-900">Create a New User</h3>
             <div class="mt-3 sm:ml-4 sm:mt-0">
-              <a href="/list" class="inline-flex items-center rounded-md bg-gray-200 px-3 py-2 text-sm font-semibold text-black shadow-sm hover:bg-gray-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">List Users</a>
+                <a wire:navigate href="/"
+                class="group flex gap-x-3 rounded-md p-2 text-sm/6 font-semibold text-gray-700 bg-gray-200 pr-3 hover:bg-gray-300 hover:text-gray-600">
+                <svg class="size-6 shrink-0 text-gray-400 group-hover:text-gray-600"
+                    fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                    aria-hidden="true" data-slot="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                </svg>
+                 Users
+            </a>
             </div>
           </div>
 

@@ -77,17 +77,56 @@ class UserLivewireTest extends TestCase
     }
 
     //Assert user can be deleted
-     public function test_allows_user_delete()
-     {
-         $user = User::factory()->create();
+    public function it_deletes_a_user_and_redirects()
+    {
+        $user = User::factory()->create();
 
-         Livewire::test(UserList::class)
-             ->call('deleteUser', $user->id);
+        Livewire::test(\App\Livewire\DeleteUser::class, ['userId' => $user->id])
+            ->call('delete')
+            ->assertRedirect(route('users.index'));
 
-         $this->assertDatabaseMissing('users', [
-             'id' => $user->id,
-         ]);
-     }
+        $this->assertDatabaseMissing('users', [
+            'id' => $user->id,
+        ]);
+    }
+
+     public function test_update_user()
+{
+    $user = User::factory()->create();
+
+    Livewire::test(UpdateUser::class, ['user' => $user])
+        ->set('firstname', 'EmmaJohn')
+        ->set('lastname', 'JohnEmma')
+        ->set('email', 'emmanjohn@gmail.com')
+        ->call('update');
+
+    $this->assertDatabaseHas('users', ['firstname' => 'EmmaJohn', 'lastname' => 'JohnEmma', 'email' => 'emmanjohn@gmail.com']);
+}
+
+// public function test_deletes_a_user_and_redirects()
+// {
+//     $user = User::factory()->create();
+
+//     Livewire::test(DeleteUser::class, ['userId' => $user->id])
+//         ->call('delete')
+//         ->assertRedirect(route('users.index'));
+
+//     $this->assertDatabaseMissing('users', [
+//         'id' => $user->id,
+//     ]);
+// }
+
+
+public function test_delete_a_user()
+{
+    $user = User::factory()->create();
+
+    Livewire::test(DeleteUser::class, ['userId' => $user->id])
+        ->call('delete')
+        ->assertRedirect(route('users.index'));
+
+    $this->assertDatabaseMissing('users', ['id' => $user->id]);
+}
 
 
 
