@@ -1,37 +1,84 @@
-## Backend dev tech task
-### Objective
- Demonstrate your backend development skills by implementing a basic user management system.
- 
-### Task Description
- Build a CRUD (Create, Read, Update, Delete) application for managing users. The system should support the following functionality:
-Required User Fields (for views and forms):
-Name
-Surname
-Email
-Phone
-Country (selected from a predefined list)
-Gender
-Password
-Repeat Password (for validation)
-Optional Fields (not required for current implementation):
-Selfie
-Introduction
-Additional Requirements:
-Support image upload (e.g., for a user profile picture)
-Enable country selection from a predefined country list
+## Backend dev tech task - User Management System
+A Laravel Livewire CRUD application to manage users with features like image upload, country selection, and gender specification. Built using **TDD**, adheres to **DDD best practices**, and implements **clean, maintainable code** structure.
 
-### Acceptance Criteria
-- Fork the provided Git repository and implement the task within your fork
-- Implement full CRUD functionality:
-- Create user
-- Update user
-- View user details
-- View user list
-- Delete user
-- Follow Test-Driven Development (TDD) principles
-- Apply Domain-Driven Design (DDD) best practices
-- Ensure code quality, readability, and maintainability
+### 🚀 Features
+ ✅ Create, Read, Update, Delete (CRUD) for users
+- 📸 Profile picture upload (with image validation)
+- 🌍 Country selection from a predefined list
+- 👨‍👩‍👧 Gender selection
+- 🔒 Password and password confirmation
+- 🔎 View individual user details
+- 🔔 Flash messages for create, update, delete actions
+- ✅ Livewire-powered UI for smooth interaction
+- 🧪 Fully tested with Feature tests using Laravel’s built-in tools and Livewire testing utilities
+
+### 📂 Folder Structure
+- `App\Livewire\` – Livewire components for User CRUD (CreateUser, EditUser, UserList, UserView, DeleteUser)
+- `App\Models\User` – Extended to support profile image storage
+- `Database\Factories\UserFactory` – Generates test and dummy users, including images
+- `resources/views` – Blade views with Tailwind CSS styling
+
+### 🧪 Tests
+Located in `tests/Feature/UserLivewireTest.php`, covering:
+- ✅ User creation
+- ✅ User update
+- ✅ User deletion (with confirmation)
+- ✅ Viewing user details
+- ✅ Listing all users
   
-### Notes:
-- Your submission will be evaluated based on code quality, adherence to best practices, and completeness of the task
-- Thank you and good luck!
+### Run Tests
+php artisan test tests/Feature/UserLivewireTest.php
+
+##📦 Installation
+### 1. Clone the repo
+git clone https://github.com/your-username/tech-task.git
+cd tech-task
+
+### 2. Install dependencies
+composer install
+npm install && npm run dev
+
+### 3. Setup environment
+cp .env.example .env
+php artisan key:generate
+
+### 4. Configure the database
+Update .env:
+
+DB_CONNECTION=mysql
+DB_DATABASE=your_database
+DB_USERNAME=root
+DB_PASSWORD=
+
+Then:
+php artisan migrate
+
+### 5. Run the App
+php artisan serve
+
+Visit: http://127.0.0.1:8000
+
+##🌐 Technologies Used
+- Laravel 10+
+- Laravel Livewire
+- Alpine.js
+- Tailwind CSS
+- SQLite/MySQL
+- PHPUnit & Laravel Test Framework
+
+##✨ Extras
+-🔁 Animated alert messages using Tailwind transitions
+-🧪 TDD methodology with red-green cycle
+-📸 Image storage in storage/app/public/profile_picture
+-🧪 Factories used for database seeding and testing
+
+##🤝 Contribution
+To contribute:
+- Fork the repository
+- Create your branch (git checkout -b feature/feature-name)
+- Commit your changes (git commit -m 'Add feature')
+- Push to the branch (git push origin feature/feature-name)
+- Open a Pull Request
+
+##📝 License
+MIT License © Emmanuel John
