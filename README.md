@@ -37,7 +37,7 @@ cd tech-task
 ### 2. Install dependencies
 ```bash
 composer install
-npm install && npm run dev
+npm install && npm run dev```
 
 ### 3. Setup environment
 cp .env.example .env
