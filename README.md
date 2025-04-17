@@ -35,7 +35,7 @@ Or sun a specific test:
 php artisan test tests/Feature/UserLivewireTest.php
 ```
 
-##📦 Installation
+## 📦 Installation
 ### 1. Clone the repo
 ```bash
 git clone https://github.com/awizendd/tech-task.git
