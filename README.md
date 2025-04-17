@@ -27,12 +27,20 @@ Located in `tests/Feature/UserLivewireTest.php`, covering:
 - ✅ Listing all users
   
 ### Run Tests
+```bash
+php artisan test
+```
+Or sun a specific test:
+```bash
 php artisan test tests/Feature/UserLivewireTest.php
+```
 
 ##📦 Installation
 ### 1. Clone the repo
+```bash
 git clone https://github.com/awizendd/tech-task.git
 cd tech-task
+```
 
 ### 2. Install dependencies
 ```bash
@@ -40,24 +48,31 @@ composer install
 npm install && npm run dev
 ```
 
-### 3. Setup environment
+### 3. Setup environment variables
+```bash
 cp .env.example .env
 php artisan key:generate
+```
 
 ### 4. Configure the database
 Update .env:
+```env
 
 DB_CONNECTION=mysql
 DB_DATABASE=your_database
 DB_USERNAME=root
 DB_PASSWORD=
+```
 
 Then:
+```bash
 php artisan migrate
+```
 
 ### 5. Run the App
+```bash
 php artisan serve
-
+```
 Visit: http://127.0.0.1:8000
 
 ##🌐 Technologies Used
