@@ -103,18 +103,6 @@ class UserLivewireTest extends TestCase
     $this->assertDatabaseHas('users', ['firstname' => 'EmmaJohn', 'lastname' => 'JohnEmma', 'email' => 'emmanjohn@gmail.com']);
 }
 
-// public function test_deletes_a_user_and_redirects()
-// {
-//     $user = User::factory()->create();
-
-//     Livewire::test(DeleteUser::class, ['userId' => $user->id])
-//         ->call('delete')
-//         ->assertRedirect(route('users.index'));
-
-//     $this->assertDatabaseMissing('users', [
-//         'id' => $user->id,
-//     ]);
-// }
 
 
 public function test_delete_a_user()
