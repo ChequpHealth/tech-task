@@ -35,6 +35,7 @@ git clone https://github.com/awizendd/tech-task.git
 cd tech-task
 
 ### 2. Install dependencies
+```bash
 composer install
 npm install && npm run dev
 
