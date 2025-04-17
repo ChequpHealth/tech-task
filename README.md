@@ -31,7 +31,7 @@ php artisan test tests/Feature/UserLivewireTest.php
 
 ##📦 Installation
 ### 1. Clone the repo
-git clone https://github.com/your-username/tech-task.git
+git clone https://github.com/awizendd/tech-task.git
 cd tech-task
 
 ### 2. Install dependencies
